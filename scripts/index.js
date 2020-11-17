@@ -4,7 +4,7 @@ script.src =
   "https://maps.googleapis.com/maps/api/js?v=quarterly&key=&callback=initMap&libraries=places&v=quarterly";
 script.defer = true;
 
-let map, marker;
+var map, marker;
 
 // Attach your callback function to the `window` object
 window.initMap = function () {
