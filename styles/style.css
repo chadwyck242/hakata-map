@@ -1,8 +1,15 @@
-/* Box Sizing Reset */
+/* Resets */
 *,
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
 }
 
 /* General Styling */
@@ -14,31 +21,68 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
   background-color: #333;
 }
 
+nav {
+  background: #333;
+  padding: 0 1.5rem;
+}
+
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   color: #fff;
   font-weight: 700;
 }
 
-/* Container Grid Layout */
-.container {
-  height: 100%;
-  display: flex;
-  flex-flow: column;
+li {
+  list-style: none;
 }
 
-/* Grid Areas */
-#header {
-  text-align: center;
+/* Container Flexbox Layout */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container > * {
+  padding: 2rem;
+}
+
+/* Header and Navigation */
+.main-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header ul {
+  display: flex;
+  order: 1;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.logo {
+  font-size: 3rem;
+}
+
+.nav-link {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 1.2rem;
+}
+
+.main-header ul li:not(:last-child) {
+  padding-right: 1.5rem;
+}
+
+/* Main Area */
+#main {
+  flex-grow: 1;
 }
 
 #map {
@@ -46,12 +90,36 @@ h1 {
   width: 100%;
 }
 
-#cards {
+.map-area {
+  height: 80vh;
+  margin-top: 5rem;
+}
+
+.card-area {
 }
 
 #footer {
 }
 
-.map-area {
-  height: 50vh;
+/* Link Styling */
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Media Queries */
+
+/* Small Screens / Tablets */
+@media screen and (min-width: 550px) {
+  .main-header ul {
+    width: auto;
+    margin-top: 0;
+  }
+}
+
+/* Desktop Wide-screen */
+@media screen and (min-width: 960px) {
+  body {
+    font-size: 16px;
+  }
 }
