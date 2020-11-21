@@ -4,7 +4,10 @@ script.src =
   "https://maps.googleapis.com/maps/api/js?v=quarterly&key=&callback=initMap&libraries=places&v=quarterly";
 script.defer = true;
 
-var map, marker;
+var map;
+var markers = [];
+const labels = "ABCDEFGHIJKLMNOPQRSTUVWKYZ";
+let labelIndex = 0;
 
 // Attach your callback function to the `window` object
 window.initMap = function () {
@@ -82,23 +85,36 @@ window.initMap = function () {
     },
   ];
 
-  for (let i = 0; i < data.length; i++) {
-    marker = new google.maps.Marker({
-      position: data[i].position,
-      animation: google.maps.Animation.DROP,
-      title: data[i].name,
-      map: map,
-    });
-    marker.addListener("click", toggleBounce);
-  }
+  function dropMarkers() {
+    clearMarkers();
 
-  function toggleBounce() {
-    if (marker.getAnimation() !== null) {
-      marker.setAnimation(null);
-    } else {
-      marker.setAnimation(google.maps.Animation.BOUNCE);
+    for (let i = 0; i < data.length; i++) {
+      addMarkers(data[i].position, data[i].name, i * 200);
     }
   }
+
+  function addMarkers(position, title, timeout) {
+    window.setTimeout(() => {
+      markers.push(
+        new google.maps.Marker({
+          position: position,
+          animation: google.maps.Animation.DROP,
+          label: labels[labelIndex++ % labels.length],
+          title: title,
+          map: map,
+        })
+      );
+    }, timeout);
+  }
+
+  function clearMarkers() {
+    for (let i = 0; i < markers.length; i++) {
+      markers[i].setMap(null);
+    }
+    markers = [];
+  }
+
+  dropMarkers();
 };
 
 // Append the 'script' element to 'head'
