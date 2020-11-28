@@ -170,6 +170,8 @@ window.initMap = function () {
       card.appendChild(cardBody);
       card.appendChild(cardCode);
 
+      card.className = "card";
+
       document.getElementById("card-container").appendChild(card);
     }
   }

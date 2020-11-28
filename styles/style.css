@@ -44,7 +44,7 @@ h2 {
 p {
   font-size: 1.6rem;
   color: #fff;
-  line-height: 1.1;
+  line-height: 1.2;
   letter-spacing: 0.055rem;
 }
 
@@ -118,9 +118,41 @@ footer {
 
 #card-container {
   display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  grid-template-columns: minmax(300px, auto);
   grid-auto-rows: minmax(150px, auto);
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+.card {
+  background-color: #fff;
+  text-align: center;
+  border: 2px solid green;
+  border-radius: 10px;
+  line-height: 1.2;
+  padding: 5px;
+  margin: 10px;
+}
+
+.card > h3 {
+  color: red;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 8px 0;
+}
+
+.card > p {
+  color: #333;
+  font-size: 1.5rem;
+  padding: 8px 10px;
+}
+
+.card > strong {
+  color: blue;
+  font-weight: 500;
+  font-size: 1.25rem;
 }
 
 /* Footer Area */
@@ -164,6 +196,16 @@ a {
     align-items: center;
     justify-content: center;
   }
+
+  #card-container {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(150px, auto);
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+  }
 }
 
 /* Desktop Wide-screen */
@@ -174,5 +216,15 @@ a {
 
   .nav-link {
     font-size: 2rem;
+  }
+
+  #card-container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(150px, auto);
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
   }
 }
