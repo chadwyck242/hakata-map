@@ -30,7 +30,7 @@ I used the following tools:
 
 ### Usage
 
-- Download or clone the project from the Github repository, which is linked (here)[https://github.com/chadwyck242/hakata-map].
+- Download or clone the project from the Github repository, which is linked [here](https://github.com/chadwyck242/hakata-map).
 - You will be required to have your own Google Maps Javascript API key. Follow the instuctions [here](https://developers.google.com/maps/documentation/javascript/overview).
 - The API key can be used in the `index.js` file where I will indicate something like **PLACE API KEY HERE** in the link that requires the API key to load the Google Map.
 - Then just open `index.html`, either by right clicking the file in the project folder and selecting a browser, or if in **VS Code**, right click on the `index.html` file and choose the command _Open With Live Server_. That should do it!
