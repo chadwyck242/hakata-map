@@ -1,7 +1,7 @@
 // Create the script tag, set the appropriate attributes
 var script = document.createElement("script");
 script.src =
-  "https://maps.googleapis.com/maps/api/js?v=quarterly&key=&callback=initMap&v=quarterly";
+  "https://maps.googleapis.com/maps/api/js?v=quarterly&key=ADD_OWN_API_KEY_HERE&callback=initMap&v=quarterly";
 script.defer = true;
 
 // Define variables for map script
