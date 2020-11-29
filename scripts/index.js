@@ -1,5 +1,7 @@
 // Create the script tag, set the appropriate attributes
 var script = document.createElement("script");
+
+// Maps API Key can be added here
 script.src =
   "https://maps.googleapis.com/maps/api/js?v=quarterly&key=ADD_OWN_API_KEY_HERE&callback=initMap&v=quarterly";
 script.defer = true;
@@ -156,6 +158,7 @@ window.initMap = function () {
   function createCards(data) {
     document.getElementById("card-container").innerHTML = "";
 
+    // Loop over the data to create HTML div elements
     for (let i = 0; i < data.length; i++) {
       let num = i;
       let card = document.createElement("div");
@@ -163,10 +166,12 @@ window.initMap = function () {
       let cardBody = document.createElement("p");
       let cardCode = document.createElement("strong");
 
+      // Add the content to each HTML element based on the data
       cardLabel.innerHTML = data[i].label;
       cardBody.innerHTML = data[i].name;
       cardCode.innerHTML = data[i].plusCode;
 
+      // Some Fizz / Buzz Fun
       if (num % 3 == 0 && num % 5 == 0) {
         cardBody.className = "light-red";
       } else if (num % 3 == 0) {
@@ -177,12 +182,14 @@ window.initMap = function () {
         cardBody.className = "charcoal";
       }
 
+      // Assemble the card elements here
       card.appendChild(cardLabel);
       card.appendChild(cardBody);
       card.appendChild(cardCode);
 
       card.className = "card";
 
+      // Attach each card to the card container grid here
       document.getElementById("card-container").appendChild(card);
     }
   }
