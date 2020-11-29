@@ -157,6 +157,7 @@ window.initMap = function () {
     document.getElementById("card-container").innerHTML = "";
 
     for (let i = 0; i < data.length; i++) {
+      let num = i;
       let card = document.createElement("div");
       let cardLabel = document.createElement("h3");
       let cardBody = document.createElement("p");
@@ -164,7 +165,17 @@ window.initMap = function () {
 
       cardLabel.innerHTML = data[i].label;
       cardBody.innerHTML = data[i].name;
-      cardCode.innerHTML = "Plus Code: " + data[i].plusCode;
+      cardCode.innerHTML = data[i].plusCode;
+
+      if (num % 3 == 0 && num % 5 == 0) {
+        cardBody.className = "light-red";
+      } else if (num % 3 == 0) {
+        cardBody.className = "light-blue";
+      } else if (num % 5 == 0) {
+        cardBody.className = "medium-green";
+      } else {
+        cardBody.className = "charcoal";
+      }
 
       card.appendChild(cardLabel);
       card.appendChild(cardBody);

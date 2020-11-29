@@ -13,6 +13,24 @@
 }
 
 /* General Styling */
+
+/* Colors */
+.light-red {
+  color: lightcoral;
+}
+
+.light-blue {
+  color: deepskyblue;
+}
+
+.medium-green {
+  color: limegreen;
+}
+
+.charcoal {
+  color: #36454f;
+}
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -129,7 +147,7 @@ footer {
 .card {
   background-color: #fff;
   text-align: center;
-  border: 2px solid green;
+  border: 3px solid black;
   border-radius: 10px;
   line-height: 1.2;
   padding: 5px;
@@ -144,13 +162,14 @@ footer {
 }
 
 .card > p {
-  color: #333;
   font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
   padding: 8px 10px;
 }
 
 .card > strong {
-  color: blue;
+  color: royalblue;
   font-weight: 500;
   font-size: 1.25rem;
 }
