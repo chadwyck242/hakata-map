@@ -40,6 +40,7 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #333;
+  color: #fff;
 }
 
 nav {
@@ -49,25 +50,26 @@ nav {
 
 h1 {
   font-size: 2.4rem;
-  color: #fff;
   font-weight: 700;
 }
 
 h2 {
   font-size: 2rem;
-  color: #fff;
   font-weight: 400;
 }
 
 p {
   font-size: 1.6rem;
-  color: #fff;
   line-height: 1.2;
   letter-spacing: 0.055rem;
 }
 
 li {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 header,
@@ -106,10 +108,29 @@ footer {
 }
 
 .nav-link {
-  color: #fff;
   font-size: 1.5rem;
+  color: #fff;
   font-weight: 500;
   padding: 1.5rem;
+}
+
+.nav-link:hover {
+  color: #333;
+  background: hsl(210, 1%, 27%);
+}
+
+.nav-link:visited {
+  color: #eee;
+}
+
+.nav-link:focus {
+  background: hsl(190, 2%, 33%);
+  border-bottom: 1px solid hsl(0, 0%, 95%);
+}
+
+.nav-link:active {
+  color: #444;
+  background: hsl(155, 10%, 80%);
 }
 
 .main-header ul li:not(:last-child) {
@@ -163,7 +184,7 @@ footer {
 
 .card > p {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 1px;
   padding: 8px 10px;
 }
@@ -190,15 +211,10 @@ footer {
 
 .footer-area a {
   font-size: 1.25rem;
+  color: #fff;
   text-decoration: underline;
   margin-top: 1rem;
   padding: 1rem;
-}
-
-/* Link Styling */
-a {
-  color: #fff;
-  text-decoration: none;
 }
 
 /* Media Queries */

@@ -1,3 +1,5 @@
-# Fukuoka Yakiniku Map
+# CS50x Final Project
 
-## A choice selection of yakiniku (grilled meat) restaurants in Fukuoka, Japan
+## Fukuoka Yakiniku Map
+
+### A choice selection of _yakiniku_ (grilled meat) restaurants in Fukuoka, Japan
