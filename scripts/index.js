@@ -11,8 +11,6 @@ var map;
 var markers = [];
 let data;
 
-// Variables for dynamic HTML card creation
-
 // Attach your callback function to the `window` object
 window.initMap = function () {
   // JS API is loaded and available
